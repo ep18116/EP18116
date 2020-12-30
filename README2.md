@@ -9,8 +9,10 @@
 [[4週目]](https://hackmd.io/be5H26EoT2uxEHkjoyRItA)
 
 [[5週目]](https://hackmd.io/90fz3WRwRramMEDoCvgqAg)
+<br>
 
 **[オンラインエディタ(Try Elm!)](https://elm-lang.org/try)**
+
 <br>
 
 ## 作業２週目(11月12~26日)
@@ -48,18 +50,18 @@ The Elm Architectureの本質が分かりやすく説明されていたため、
 
 ## Elmを試して学ぶ（続き）
 **[オンラインエディタ(Try Elm!)](https://elm-lang.org/try)**
-　<img src="https://i.imgur.com/qjRe0pt.png" width="600">
+<br>　<img src="https://i.imgur.com/qjRe0pt.png" width="600"><br>
  
 [ここの　Here　を押すと色んなサンプルコードを試せるサイトを開ける。](https://elm-lang.org/examples)（気づきませんでした）
 
-　<img src="https://i.imgur.com/2iTFOLo.png" width="600">
+　<br><img src="https://i.imgur.com/2iTFOLo.png" width="600"><br>
 <br>
 
 　また、一部のプログラム (例: import )は、カーソルを合わせるとHintが表示される。
-　<img src="https://i.imgur.com/QZ35wtb.png" width="500">
+　<br><img src="https://i.imgur.com/QZ35wtb.png" width="500"><br>
  
  Hintをクリックすると、解説ページが表示される。(本来は英語のため、翻訳が必要)
-　<img src="https://i.imgur.com/yNW9l8N.png" width="500">
+　<br><img src="https://i.imgur.com/yNW9l8N.png" width="500"><br>
 <br>
 
 ### Playgraundでできること(メモ)
@@ -68,10 +70,10 @@ https://package.elm-lang.org/packages/evancz/elm-playground/latest/Playground#ga
 <br>
 
 ### 画像を表示させるサンプルコード
-　<img src="https://i.imgur.com/7bNALIc.png" width="500">
+　<br><img src="https://i.imgur.com/7bNALIc.png" width="500"><br>
  
 
-```e
+```ruby
 import Playground exposing (..)
 
 main =
@@ -85,9 +87,9 @@ main =
 
 ### 木の図形を表示させるサンプルコード
 
-　<img src="https://i.imgur.com/cSnxNKJ.png" width="500">
+　<br><img src="https://i.imgur.com/cSnxNKJ.png" width="500"><br>
 
-```e
+```ruby
 import Playground exposing (..)
 
 main =
@@ -104,14 +106,12 @@ main =
     ]
 ```
 
-
 <br>
 
 ## マウスを合わせたところに円を表示させるサンプルコード
-　<img src="https://i.imgur.com/gFpvo8U.png" width="500">
+　<br><img src="https://i.imgur.com/gFpvo8U.png" width="500"><br>
 
-:::spoiler **ソースコード**
-```e
+```ruby
 import Playground exposing (..)
 
 main =
@@ -136,7 +136,6 @@ update computer memory =
   memory
   --memory を更新させる
 ```
-:::
 
 このプログラムは今回の目的のプログラムに近いものである気がするので、これを編集して利用してみる。
 
@@ -146,18 +145,18 @@ update computer memory =
 ### 創成Dの記憶を思い出す
 　下の画像は、物体Aと物体Bの座標の差を計算し、範囲内に収まっているかを判定するプログラム。
  これを参考にする。
- <img src="https://i.imgur.com/djGESn1.png" width="500">
+<br> <img src="https://i.imgur.com/djGESn1.png" width="500"><br>
  
-もし、
+もし、<br>
 **マウスがドラッグされた**
-かつ
+かつ<br>
 **[(円のx座標-マウスのx座標)の２乗 + (円のy座標-マウスのy座標)の２乗]の平方根 < 円の半径**
 となっていれば、上手く行くのでは？
 <br>
 
 ### やってみる
 
-```e
+```ruby
 if computer.mouse.down && 
    sqrt((cir.x - computer.mouse.x)*(cir.x - computer.mouse.x) + (cir.y - computer.mouse.y)*(cir.y - computer.mouse.y)) < 30/2
    --computer.mouse.down　はマウスが押されたとき
@@ -169,8 +168,8 @@ if computer.mouse.down &&
 また、viewの部分も、図形が常にマウスの位置に移動するのではなく、ドラッグするまでは動かないように変更する必要がある。
 
 それらを踏まえ、他のサンプルコードを参考にしながら一旦書いてみた。
-:::spoiler **ソースコード**(未完)
-```e
+**ソースコード**　(未完)
+```ruby
 import Playground exposing (..)
 
 main =
@@ -209,16 +208,15 @@ update computer cir =
         --条件を満たしていなかったら、x, yはそのまま
   ]        
 ```
-:::
 
 <br>
 
 案の定エラーが発生。
-　<img src="https://i.imgur.com/DgAV02y.png" width="500">
+　<br><img src="https://i.imgur.com/DgAV02y.png" width="500"><br>
 <br>
 
 エラー文を翻訳してもよく分からない…
- <img src="https://i.imgur.com/3dukmmd.png" width="500">
+ <br><img src="https://i.imgur.com/3dukmmd.png" width="500"><br>
 <br>
 
 ## 次回(３週目)の目標
