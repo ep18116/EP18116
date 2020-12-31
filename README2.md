@@ -1,14 +1,14 @@
 # Webブラウザで図形をドラッグ＆ドロップで動かせるようにしてみよう！2週目<br><br>EP18116 村松直幸
 
-[[1週目(前回)]](https://hackmd.io/cotccYjGQCi7Y_T_wJz8ow)
+[[1週目(前回)]](https://github.com/ep18116/EP18116/blob/main/README1.md)
 
 [2週目(今回)]
 
-[[3週目(次回)]](https://hackmd.io/Med9J4N4R2ChMmR1JHdA5A)
+[[3週目(次回)]](https://github.com/ep18116/EP18116/blob/main/README3.md)
 
-[[4週目]](https://hackmd.io/be5H26EoT2uxEHkjoyRItA)
+[[4週目]](https://github.com/ep18116/EP18116/blob/main/README4.md)
 
-[[5週目]](https://hackmd.io/90fz3WRwRramMEDoCvgqAg)
+[[5週目]](https://github.com/ep18116/EP18116/blob/main/README5.md)
 <br>
 
 **[オンラインエディタ(Try Elm!)](https://elm-lang.org/try)**
@@ -224,4 +224,4 @@ update computer cir =
 * 情報を集め、エラーを解決させる。
 * gameを使うよりも、sandbox(html版)を利用した方がいいと聞いたので、そちらを調べてみる。
 
-[[次回(３週目)]](https://hackmd.io/Med9J4N4R2ChMmR1JHdA5A)
+[[次回(３週目)]](https://github.com/ep18116/EP18116/blob/main/README3.md)
