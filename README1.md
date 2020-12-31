@@ -3,13 +3,13 @@
 
 [1週目(今回)]
 
-[[2週目(次回)]](https://hackmd.io/ea7tOUt5Q_mTh3Bo1WN7dg)
+[[2週目(次回)]](https://github.com/ep18116/EP18116/blob/main/README2.md)
 
-[[3週目]](https://hackmd.io/Med9J4N4R2ChMmR1JHdA5A)
+[[3週目]](https://github.com/ep18116/EP18116/blob/main/README3.md)
 
-[[4週目]](https://hackmd.io/be5H26EoT2uxEHkjoyRItA)
+[[4週目]](https://github.com/ep18116/EP18116/blob/main/README4.md)
 
-[[5週目]](https://hackmd.io/90fz3WRwRramMEDoCvgqAg)
+[[5週目]](https://github.com/ep18116/EP18116/blob/main/README5.md)
 
 <br>
 
