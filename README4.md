@@ -1,14 +1,14 @@
 # Webブラウザで図形をドラッグ＆ドロップで動かせるようにしてみよう！4週目<br><br>EP18116 村松直幸
 
-[[1週目]](https://hackmd.io/cotccYjGQCi7Y_T_wJz8ow)
+[[1週目]](https://github.com/ep18116/EP18116/blob/main/README1.md)
 
-[[2週目]](https://hackmd.io/ea7tOUt5Q_mTh3Bo1WN7dg?both)
+[[2週目]](https://github.com/ep18116/EP18116/blob/main/README2.md)
 
-[[3週目(前回)]](https://hackmd.io/Med9J4N4R2ChMmR1JHdA5A)
+[[3週目(前回)]](https://github.com/ep18116/EP18116/blob/main/README3.md)
 
 [4週目(今回)]
 
-[[5週目(次回)]](https://hackmd.io/90fz3WRwRramMEDoCvgqAg)
+[[5週目(次回)]](https://github.com/ep18116/EP18116/blob/main/README5.md)
 
 **[オンラインエディタ(Try Elm!)](https://elm-lang.org/try)**
 <br>
@@ -504,4 +504,4 @@ view model =
 
 まだまだこれらの問題を解決できていないため、次回で解決する。
 
-[[5週目(次回)]](https://hackmd.io/90fz3WRwRramMEDoCvgqAg)
+[[5週目(次回)]](https://github.com/ep18116/EP18116/blob/main/README5.md)
