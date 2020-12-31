@@ -11,7 +11,6 @@
 [[5週目(次回)]](https://hackmd.io/90fz3WRwRramMEDoCvgqAg)
 
 **[オンラインエディタ(Try Elm!)](https://elm-lang.org/try)**
-
 <br>
 
 ## 解決すべき問題
@@ -21,7 +20,7 @@
 * **ドラッグを認識する**
 * **ドロップを認識する**
 * **ドラッグ＆ドロップにより図形の座標を動かす**
-* **図の端っこを持ったら、カーソルがその位置のまま図形を動かせるようにする(ofset)**
+* **図をドラッグしたら、カーソルがその位置のまま図形を動かせるようにする(offset)**
 * **ソースコードを50行以内に収める**
 
 まだまだ問題はいっぱいある。
@@ -35,8 +34,7 @@
 
  　<br><img src="https://i.imgur.com/bnqhiLl.png" width="500"><br>
   
- 特に座標も指定していないため、表示画面の左上隅に水色の四角形が表示された。
- 
+**ソースコード**
 ```ruby
 --図形(四角形)を表示
 import Browser
@@ -78,12 +76,14 @@ view model =
     []
   ]
 ```
+<br>
 
+ 特に座標も指定していないため、表示画面の左上隅に水色の四角形が表示された。
  <br>
 
 ## 図形の位置を指定する
 
-[[Elm で mouse のイベントを取得する覚書]](https://blog.emattsan.org/entry/2019/05/26/093114)<br>
+[[Elm で mouse のイベントを取得する覚書]](https://blog.emattsan.org/entry/2019/05/26/093114)
 まずはこのサイトを参考にしマウスの座標を習得する。
 
 このプログラムを参考にし、カーソルの位置に図形が表示されるようにしたい。
@@ -116,6 +116,7 @@ update msg model =
 
 無事、図形の中心が軸となって図形が動いた。
 
+**ソースコード**
 ```ruby
 --図形の位置を指定する
 import Browser
@@ -185,7 +186,6 @@ view model =
         []
     ]
 ```
-
 <br>
 <br>
 
@@ -217,7 +217,7 @@ on "mousemove" (map2 Move (field "clientX" int) (field "clientY" int))
 onClick メッセージ
 ```
 という方法でクリックを認識しメッセージを送っていた。
-onClickを使うためには、
+onClickを使うためには、最初に
 ```ruby
 import Html.Events exposing (..)
 ```
@@ -242,7 +242,7 @@ update msg model =
 
 Model ～～～
 という書き方ならエラーは出なくなるかと思い、試しに
-```e
+```ruby
     Click ->
       Model 100 100
 ```
@@ -272,12 +272,25 @@ updateを以下のように書き換える。
 update msg model =
   case msg of
     Move x y-> 
-      {model | x = x-25, y = y-25}
+      { x = x-25
+      , y = y-25
+      , color = model.color}
       --もしMoveを受け取ったら、図形を上のように動かす
 
     Click ->
-      {model | color = "lightblue"}
+      { x = model.x
+      , y = model.y
+      , color = "lightblue"}
       --もしClickを受け取ったら、色をlightblueにする
+```
+（ここで、Moveではcolor、Clickではxとyの値は変化させる必要はない。そのため、次のように書くと見やすく省略することができる。）
+```ruby
+  case msg of
+    Move x y-> 
+      {model | x = x-25, y = y-25}
+
+    Click ->
+      {model | color = "lightblue"}
 ```
 図形の色を設定していた箇所を書き換える。
 ```ruby
@@ -290,6 +303,7 @@ update msg model =
 
 分かりづらいが、クリックすると色が変化する。
 
+**ソースコード**
 ```ruby
 --クリックすると図形の色が変化する
 import Browser
@@ -368,7 +382,6 @@ view model =
         []
     ]
 ```
-
 <br>
 
 ### ドラッグ(onMouseDown)に書き換える
@@ -391,19 +404,20 @@ onMouseDownと殆ど同じような書き方で実装してみる。
 
 特に問題なく、
 
-* ドラッグしている間は図形をlightblue色に
-* ドロップしたら図形をskyblue色に
+* **ドラッグしている間は図形をlightblue色に**
+* **ドロップしたら図形をskyblue色に**
 
 を実装することができた。
 
+**ソースコード**
 ```ruby
 --ドラッグすると図形の色が変化する。ドロップすると元に戻る
 import Browser
 import Html exposing (Html, div, span, text)
-import Html.Events exposing (on)
+import Html.Events exposing (..)
 import Html.Attributes exposing (style)
 import Json.Decode exposing (map2, field, int)
-import Html.Events exposing (..)
+
 
 main =
   Browser.sandbox
@@ -481,12 +495,11 @@ view model =
         []
     ]
 ```
-
 <br>
 
 ## 次回(５週目)の目標
 * **ドラッグ＆ドロップにより図形の座標を動かす**
-* **図の端っこを持ったら、カーソルがその位置のまま図形を動かせるようにする(ofset)**
+* **図をドラッグしたら、カーソルがその位置のまま図形を動かせるようにする(offset)**
 * **ソースコードを50行以内に収める**
 
 まだまだこれらの問題を解決できていないため、次回で解決する。
