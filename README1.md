@@ -162,4 +162,4 @@ import~を入力してみた。
 
 Elmの基礎を学びつつ、図形を描画させたりする。
 
-[[次回 (2週目)]](https://hackmd.io/ea7tOUt5Q_mTh3Bo1WN7dg)
+[[次回 (2週目)]](https://github.com/ep18116/EP18116/blob/main/README2.md)
